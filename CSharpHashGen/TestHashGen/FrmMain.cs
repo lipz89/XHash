@@ -14,14 +14,13 @@ namespace TestHashGen
         private void btnCheck_Click(object sender, EventArgs e)
         {
             var publicKey = this.txtPublicKey.Text.Trim();
-            var tick = this.txtTick.Text.Trim();
-            var hash = Run(publicKey, tick);
+            var hash = Run(publicKey);
             this.txtHash.Text = hash;
         }
 
-        private string Run(string publicKey, string tick)
+        private string Run(string publicKey)
         {
-            return ExecuteDos("HashGen.exe", publicKey, tick);
+            return ExecuteDos("HashGen.exe", publicKey);
         }
 
 

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
+using XHashGen;
 
 namespace XHashChecker
 {
@@ -11,7 +12,6 @@ namespace XHashChecker
             InitializeComponent();
 
             this.txtPublicKey.TextChanged += Txt_TextChanged;
-            this.txtTick.TextChanged += Txt_TextChanged;
             this.txtHash.TextChanged += Txt_TextChanged;
         }
 
@@ -23,11 +23,10 @@ namespace XHashChecker
 
         private void btnCheck_Click(object sender, EventArgs e)
         {
-            var publicKey = this.txtPublicKey.Text.Trim();
-            var tick = this.txtTick.Text.Trim();
+            var input = this.txtPublicKey.Text.Trim();
             var hash = this.txtHash.Text.Trim();
 
-            var result = XHash.ValidateAuthorize(tick, publicKey, hash);
+            var result = XHash.Validate(input, hash);
             if (result)
             {
                 lblResult.Text = "验证成功。";
@@ -35,7 +34,7 @@ namespace XHashChecker
             }
             else
             {
-                lblResult.Text = "验证失败，请检查算法。";
+                lblResult.Text = "验证失败！";
                 lblResult.BackColor = Color.Pink;
             }
         }

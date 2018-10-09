@@ -9,19 +9,17 @@ from base64 import b64decode
 
 import sys
 
-def createHash(tick,publicKey):
+def createHash(input):
     saltBytes=b("").join([pack("@H", randint(0, 0xffff)) for i in range(12)])
     saltB64=b64encode(saltBytes)
     salt=saltB64.decode('us-ascii')
-    input=tick+publicKey
-    rawhash = PBKDF2(input, b64decode(salt), 50).read(24)
+    rawhash = PBKDF2(input, b64decode(salt), 5000).read(24)
     hash=b64encode(rawhash).decode('us-ascii')
     result=salt+hash
     return result
  
 
 if __name__=='__main__':
-    tick="123456"
-    publicKey="0987654321"
-    hash=createHash(tick,publicKey)
+    input="123456"
+    hash=createHash(input)
     print(hash)

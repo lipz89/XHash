@@ -7,45 +7,38 @@ namespace HashGen
     {
         static void Main(string[] args)
         {
-            if (args == null || args.Length == 0)
+            if (args == null || args.Length != 1)
             {
                 Do();
                 return;
             }
 
-            if (args.Length != 2)
+            if (args[0] == "-help")
             {
-                if (args.Length == 1 && args[0] == "-help")
-                {
-                    Help();
-                }
-                return;
+                Help();
             }
 
-            var publicKey = args[0];
-            var tick = args[1];
-            var hash = XHash.CreateAuthorize(tick, publicKey);
+            var input = args[0];
+            var hash = XHash.Create(input);
             Console.WriteLine(hash);
         }
 
         private static void Help()
         {
             Console.WriteLine("HASH Help:");
-            Console.WriteLine("请输入两个参数，分别为PublicKey和Tick。");
-            Console.ReadLine();
+            Console.WriteLine("输入一个明文，输出一个密文。");
+            Console.WriteLine("任意键继续。。。");
+            Console.ReadKey();
         }
 
         private static void Do()
         {
             while (true)
             {
-                Console.Write("请输入PunlicKey：");
-                var publicKey = Console.ReadLine();
-                if (publicKey == null) break;
-                Console.Write("请输入Tick：");
-                var tick = Console.ReadLine();
-                if (tick == null) break;
-                var hash = XHash.CreateAuthorize(tick, publicKey);
+                Console.Write("请输入明文：");
+                var input = Console.ReadLine();
+                if (input == null) break;
+                var hash = XHash.Create(input);
                 Console.WriteLine("Hash：");
                 Console.WriteLine(hash);
                 Console.WriteLine();
