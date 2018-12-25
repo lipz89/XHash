@@ -43,7 +43,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(39, 38);
+            this.label1.Location = new System.Drawing.Point(48, 38);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(37, 15);
@@ -52,16 +52,16 @@
             // 
             // txtPublicKey
             // 
-            this.txtPublicKey.Location = new System.Drawing.Point(112, 34);
-            this.txtPublicKey.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPublicKey.Location = new System.Drawing.Point(123, 33);
+            this.txtPublicKey.Margin = new System.Windows.Forms.Padding(4);
             this.txtPublicKey.Name = "txtPublicKey";
             this.txtPublicKey.Size = new System.Drawing.Size(594, 25);
             this.txtPublicKey.TabIndex = 1;
             // 
             // txtHash
             // 
-            this.txtHash.Location = new System.Drawing.Point(112, 89);
-            this.txtHash.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtHash.Location = new System.Drawing.Point(123, 88);
+            this.txtHash.Margin = new System.Windows.Forms.Padding(4);
             this.txtHash.Name = "txtHash";
             this.txtHash.Size = new System.Drawing.Size(594, 25);
             this.txtHash.TabIndex = 5;
@@ -69,7 +69,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(39, 92);
+            this.label3.Location = new System.Drawing.Point(48, 93);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(37, 15);
@@ -78,7 +78,7 @@
             // 
             // lblResult
             // 
-            this.lblResult.Location = new System.Drawing.Point(39, 190);
+            this.lblResult.Location = new System.Drawing.Point(48, 190);
             this.lblResult.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblResult.Name = "lblResult";
             this.lblResult.Size = new System.Drawing.Size(669, 29);
@@ -98,7 +98,7 @@
             // btnCheck
             // 
             this.btnCheck.Location = new System.Drawing.Point(323, 141);
-            this.btnCheck.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCheck.Margin = new System.Windows.Forms.Padding(4);
             this.btnCheck.Name = "btnCheck";
             this.btnCheck.Size = new System.Drawing.Size(100, 29);
             this.btnCheck.TabIndex = 8;
@@ -157,7 +157,7 @@
             this.Controls.Add(this.txtPublicKey);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmMain";

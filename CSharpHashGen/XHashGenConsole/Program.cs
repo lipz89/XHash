@@ -45,6 +45,7 @@ namespace HashGen
                 Console.Write("按y继续，否则退出：");
                 var key = Console.ReadKey();
                 if (key.KeyChar != 'y') break;
+                Console.WriteLine();
             }
         }
     }

@@ -1,5 +1,5 @@
 @echo off
 
-java JavaHashGen.Test 12333333 BYs80NlUqQ6/1lBCfcNVYFZQVycuzTIIItS8/MyRKHsdzmG8cPYmwgXWp7mZoZeC
+java JavaHashGen.Test 123456 pHQwR+/mAh0H4QKqJlCsQ2dipxcTxBVP1XycBdLa3VhH/ijfD1QHNQb/qNfrN9H4
 
 pause
